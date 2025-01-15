@@ -9,10 +9,8 @@ import tracemalloc
 import time
 
 
-
 #Import custom module
 from get_json import Solar
-
 
 class Prediction():
     def __init__(self,siteid,type,start_time,end_time,meters,api_key,name,period,print_info = False):
