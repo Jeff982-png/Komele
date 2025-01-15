@@ -9,3 +9,5 @@ env/
 #Ignore projet files
 *.idea
 *.vscode
+*.csv
+*.json

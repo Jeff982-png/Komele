@@ -114,7 +114,7 @@ class Prediction():
         plt.xlabel('Date')
         plt.ylabel('Difference W (Actual - Predicted)')
         plt.title('Difference between Predicted and Actual Values')
-        plt.show()
+        #plt.show()
         #save to csv onyl the first data of predict and the first of compare
         first_row = merged_data.iloc[0][['ds', 'yhat', 'difference']]
         first_row.to_csv('first_value.csv', index=False)
