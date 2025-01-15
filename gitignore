@@ -1,0 +1,11 @@
+#Ignore virutal env
+venv/
+env/
+
+#Ignore cache 
+*.pyc
+*.pyo
+
+#Ignore projet files
+*.idea
+*.vscode

@@ -1,0 +1,33 @@
+/* btn */
+.charts-button .v-btn, .home-button .v-btn {
+    border-radius: 32px;
+}
+/* icon */
+.charts-button .v-btn .v-icon, .home-button .v-btn .v-icon {
+    color: #444;
+}
+/* btn hover */
+.charts-button .v-btn:hover, .home-button .v-btn:hover {
+    background-color: #000;
+    color: #fff;
+}
+/* btn hover icon */
+.charts-button .v-btn:hover .v-icon, .home-button .v-btn:hover .v-icon {
+    color: #fff;
+}
+
+/* background */
+.bg-group-background, .v-application {
+    background-color: aquamarine !important;
+}
+
+/* border around card */
+.v-card {
+	border: none;
+}
+
+/* border remove */
+#nrdb-ui-widget-6d5e28dc7e0fd4bd .v-spacer {
+    background-color: #fff;
+    border-radius: 16px;
+}

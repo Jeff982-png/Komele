@@ -1,0 +1,28 @@
+# Navigate to your project directory
+cd path/to/your/project
+
+# Create a virtual environment
+python -m venv venv
+
+# Open PowerShell as Administrator if needed
+
+# Change the execution policy
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+# Activate the virtual environment
+#Windows
+.\venv\Scripts\activate
+# On macOS and Linux
+source venv/bin/activate
+
+# Install required packages
+pip install pandas matplotlib fbprophet
+
+# Generate a requirements.txt file (optional)
+pip freeze > requirements.txt
+
+#Install from requirements list
+pip install -r requirements.txt
+
+#Deactivate
+deactivate
