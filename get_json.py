@@ -7,6 +7,7 @@ import os
 class Solar():    
     def request(self, siteid,type,start_time, end_time, meters,api_key,name):
         req = 'https://monitoringapi.solaredge.com/site/' + siteid + '/'+ type + '?meters=' + meters + '&startTime=' + start_time + '&endTime=' + end_time + '&api_key=' + api_key
+        print(req)
         self.raw = requests.get(req)
         self.raw = self.raw.json()
         self.type = type
@@ -49,15 +50,3 @@ class Solar():
             if not json_file_found:
                 raise ValueError('No json files found in the directory')     
         return      
-
-
-
-    # https://monitoringapi.solaredge.com/site/4466261/power?timeUnit=QUATER_OF_AN_HOUR&format=csv&startTime=2024-11-21%2011:00:00&endTime=2024-11-22%2000:00:00&api_key=MLK3N9SFEN0UHJV3MCNISYFAO126AACA
-    # #Delata:
-    # https://monitoringapi.solaredge.com/site/4466261/powerDetails?meters=CONSUMPTION&startTime=2024-11-21%2011:00:00&endTime=2024-11-22%2000:00:00&api_key=MLK3N9SFEN0UHJV3MCNISYFAO126AACA
-    # https://monitoringapi.solaredge.com/site/4466261/energyDetails?meters=CONSUMPTION&startTime=2024-11-21%2011:00:00&endTime=2024-11-22%2000:00:00&api_key=MLK3N9SFEN0UHJV3MCNISYFAO126AACA
-
-    # #Dnevno
-    # https://monitoringapi.solaredge.com/site/4466261/energyDetails?meters=CONSUMPTION&startTime=2024-11-14%2000:00:00&endTime=2024-12-02%2000:00:00&api_key=MLK3N9SFEN0UHJV3MCNISYFAO126AACA
-    # #Na četrt ure
-    # https://monitoringapi.solaredge.com/site/4466261/energyDetails?&timeUnit=QUARTER_OF_AN_HOUR&meters=CONSUMPTION&startTime=2024-11-14%2000:00:00&endTime=2024-12-02%2000:00:00&api_key=MLK3N9SFEN0UHJV3MCNISYFAO126AACA

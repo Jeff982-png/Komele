@@ -30,7 +30,7 @@ class Mqtt():
 
 
 if __name__ == '__main__':
-    mqtt = Mqtt(mqtt_client_name = "Solar",mqtt_broker = "192.168.1.12",username = "ah",password = "komele")
+    mqtt = Mqtt(mqtt_client_name = "Solar",mqtt_broker = "192.168.64.222",username = "ah",password = "komele")
     #Open database.csv
     with open('database.csv') as csv_file:
         data = pd.read_csv(csv_file)

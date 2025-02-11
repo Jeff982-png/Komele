@@ -106,7 +106,7 @@ class Prediction():
         plt.fill_between(merged_data['ds'], merged_data['yhat_lower'], merged_data['yhat_upper'], color='blue', alpha=0.2)
         plt.legend()
         plt.xlabel('Date')
-        plt.ylabel('Poraba W')
+        plt.ylabel('Consumption W')
         plt.title('Predicted vs Actual Values')
         plt.subplot(2,1,2)
         plt.plot(merged_data['ds'], merged_data['difference'], label='Difference', color='red')
@@ -114,7 +114,7 @@ class Prediction():
         plt.xlabel('Date')
         plt.ylabel('Difference W (Actual - Predicted)')
         plt.title('Difference between Predicted and Actual Values')
-        #plt.show()
+        plt.show()
         #save to csv onyl the first data of predict and the first of compare
         first_row = merged_data.iloc[0][['ds', 'yhat', 'difference']]
         first_row.to_csv('first_value.csv', index=False)
@@ -140,12 +140,12 @@ if __name__ == '__main__':
 
     #Dictionary for the model
     model = {   
-        "siteid": '4466261',
+        "siteid": '',
         "type": 'powerDetails',
         "start_time": '2024-11-14%2011:00:00',
         "end_time": '2024-12-02%2013:00:00',
         "meters": 'CONSUMPTION',
-        "api_key": 'MLK3N9SFEN0UHJV3MCNISYFAO126AACA',
+        "api_key": '',
         "name": 'database',
         "period": 2,
     }
@@ -159,10 +159,6 @@ if __name__ == '__main__':
     print("Time elapsed: ", end_time - start_time)
     snapshot = tracemalloc.take_snapshot()
     top_stats = snapshot.statistics('lineno')
-
-    for stat in top_stats[:10]:
-        print(stat)
-    
 
 
 
