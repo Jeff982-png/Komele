@@ -58,25 +58,6 @@ This module focuses on processing and validating JSON data. It provides utility 
 
 3. Monitor logs for any errors or messages to verify successful operation.
 
-## Contributing
-
-Contributions are welcome! Please follow these steps to contribute:
-
-1. Fork the repository.
-2. Create a new branch for your feature or bugfix:
-   ```bash
-   git checkout -b feature-name
-   ```
-3. Commit your changes with descriptive messages:
-   ```bash
-   git commit -m "Add new feature"
-   ```
-4. Push to your fork:
-   ```bash
-   git push origin feature-name
-   ```
-5. Open a pull request.
-
 ## License
 
 This project is licensed under the MIT License. See the `LICENSE` file for details.
